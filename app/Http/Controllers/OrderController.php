@@ -45,7 +45,7 @@ class OrderController extends Controller
             $order->payment_status='panding';
             $order->save();
             $id=$cart['id'];
-            $order->product()->attach($id,['quantity'=>$cart['quantity']]);
+            $order->product()->attach($id,['quantity'=>$cart['quantity'],'amount'=>$cart['price']]);
         }
         session()->forget('cart');
         return view('order-received');

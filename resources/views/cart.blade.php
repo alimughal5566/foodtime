@@ -43,7 +43,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                                     @foreach($cart_data as $data)
+                                                     @foreach($cart_data ?? '' as $data)
                                                          {{--@dd('/images/'.$data['photo'])--}}
                                             <tr class="cart_item">
                                                 <td class="product-remove">
@@ -93,7 +93,7 @@
                                                     </div>
 {{--                                                    <input type="submit" class="button" name="update_cart" value="Update Cart" />--}}
                                                     <div class="wc-proceed-to-checkout">
-                                                        <input type="submit" class="checkout-button button alt wc-forward">Proceed to Checkout</a>
+                                                        <input type="submit" value="Proceed to Checkout" class="checkout-button button alt wc-forward">
                                                     </div>
                                                     <input type="hidden" id="_wpnonce" name="_wpnonce" value="21ca9d92f8" /><input type="hidden" name="_wp_http_referer" value="/pizzaro/cart/" />
                                                 </td>
@@ -119,7 +119,7 @@
                                                 </tr>
                                             </table>
                                             <div class="wc-proceed-to-checkout">
-                                                <a href="{{route('checkout')}}" class="checkout-button button alt wc-forward">Proceed to Checkout</a>
+{{--                                                <a href="{{route('checkout')}}" class="checkout-button button alt wc-forward">Proceed to Checkout</a>--}}
                                             </div>
                                         </div>
                                     </div>
