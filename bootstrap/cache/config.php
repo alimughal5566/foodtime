@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:fWV3TCYuwxNzerWXEtZX12c1l2Yc6WipHmACWkxmqjk=',
+    'key' => 'base64:HZwhL/GWp/Wj2qU/I7QsG8U1N/k8AYGBMutgdsVW2EI=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -175,7 +175,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -225,7 +225,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'db_food_time',
+        'database' => 'foodtime',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -235,7 +235,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_food_time',
+        'database' => 'foodtime',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -255,7 +255,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_food_time',
+        'database' => 'foodtime',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -270,7 +270,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'db_food_time',
+        'database' => 'foodtime',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -314,12 +314,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\app',
+        'root' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\app/public',
+        'root' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -365,13 +365,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -421,7 +421,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -444,7 +444,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\resources\\views/vendor/mail',
       ),
     ),
     'log_channel' => NULL,
@@ -523,7 +523,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -543,9 +543,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\resources\\views',
+      0 => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\PC\\Downloads\\Microsoft.SkypeApp_kzf8qxf38zg5c!App\\All\\foodtime\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework\\views',
   ),
   'flare' => 
   array (
