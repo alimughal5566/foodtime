@@ -62,9 +62,10 @@
                     <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
                     <div class="primary-navigation">
                         <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
+                            <li class="menu-item"><a href="{{'/home'}}">Home</a></li>
                             <li class="menu-item"><a href="{{'category-detail'}}">Order Online</a></li>
 
-                            <li class="menu-item"><a href="{{('/about')}}">About Us</a></li>
+{{--                            <li class="menu-item"><a href="{{('/about')}}">About Us</a></li>--}}
                             {{--                        <li class="menu-item"><a href="{{url('/contact')}}">Contact</a></li>--}}
                             <li class="menu-item"><a href="{{'register'}}">Register</a></li>
                             <li class="menu-item"><a href="{{'login'}}">Login</a></li>

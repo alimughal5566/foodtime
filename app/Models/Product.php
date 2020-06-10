@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Order;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -11,7 +12,6 @@ class Product extends Model
     public function category(){
         return $this->belongsTo(categories::class);
     }
-
 
     public function saveproduct($formdata){
         if ($formdata->hasFile('thumbnail')) {
@@ -56,6 +56,9 @@ class Product extends Model
         }
     }
 
-
+    public function order()
+    {
+        return $this->belongsToMany(Order::class,'oders_details','order_id','product_id')->withPivot('quantity','amount');
+    }
 }
 
