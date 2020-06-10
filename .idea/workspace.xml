@@ -118,6 +118,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../food-food/food-food" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -189,6 +190,7 @@
       <workItem from="1591594428645" duration="14000" />
       <workItem from="1591709330049" duration="122000" />
       <workItem from="1591758409245" duration="1129000" />
+      <workItem from="1591810161442" duration="1219000" />
     </task>
     <servers />
   </component>
