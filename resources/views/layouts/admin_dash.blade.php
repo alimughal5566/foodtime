@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+dashboard<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
+{{--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">--}}
     <link href="{{asset('assets/backend/admindash/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
 
 </head>
 
@@ -107,6 +109,18 @@
         </li>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-first-order"></i>
+            <span>Oders</span>
+        </a>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Orders</h6>
+                <a class="collapse-item" href="{{route('order_list')}}">Orders_list</a>
+            </div>
+        </div>
+    </li>
 
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">

@@ -75,7 +75,7 @@
                                                     <div class="qty-btn">
                                                         <label>Quantity</label>
                                                         <div class="quantity">
-                                                            <input type="number" name="quantity" value="{{$data['quantity']}}" title="Qty" class="input-text qty text"/>
+                                                            <input type="number" id="quantity" name="quantity" value="{{$data['quantity']}}" title="Qty" class="input-text qty text my_button"/>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -132,5 +132,23 @@
 
         </div>
     </div>
-
+<script>
+    // var quantity=document.getElementById('qty').value;
+    $(document).ready(function() {
+                $('.my_button').click(function() {
+                        var orderid=$(this).attr("value");
+                        console.log(orderid);
+                        $.ajax({
+                            type: "get",
+                            url: "/orderdetails/",
+                            dataType: "JSON",
+                            data: {orderid:orderid
+                            },
+        success : function(response) {
+            // $(inputQuantityElement).val(new_quantity);
+        }
+    });
+                });
+    });
+</script>
 @endsection

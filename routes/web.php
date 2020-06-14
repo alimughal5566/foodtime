@@ -37,7 +37,8 @@ Route::group(['Public'],function () {
 
     Route::group(['ProductController'], function () {
 
-        Route::get('addtoCart{id}','ProductController@addtoCart')->name('addtoCart');
+        Route::get('/addtoCart{id}','ProductController@addtoCart')->name('addtoCart');
+//        Route::get('/addto{id}','ProductController@addtoCart')->name('addtoCart');
         Route::get('cartView','ProductController@viewCart')->name('viewCart');
 
 
@@ -74,11 +75,14 @@ Route::group(['Private'],function () {
 
 
     Route::group(['Admin', 'middleware' => 'usertypechecking:' . 'admin'], function () {
-
-       Route::group(['AdmindashController'],function () {
+        Route::group(['AdmindashController'],function () {
         Route:: get('/admindashboard','AdmindashController@index')->name('admin_dash');
+        Route:: get('/order_list','OrderController@showOrder')->name('order_list');
+        Route:: get('/orderdetails{id}','OrderController@orderdetails')->name('orderdetails');
 
-    });
+
+
+       });
 
 
        //                            ===============ProductController=============

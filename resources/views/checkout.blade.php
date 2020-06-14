@@ -120,7 +120,7 @@
 {{--                                                @endphp--}}
                                             <tr class="cart_item">
                                                 <td class="product-name">
-                                                    {{$data['name']}}&nbsp;<strong class="product-quantity">&times; {{$data['quantity']}}</strong>
+                                                    {{$data['name']}}<strong class="product-quantity">{{$data['quantity']}}</strong>
                                                     <dl class="variation">
                                                         <dt class="variation-Baseprice">Base price:</dt>
                                                         <dd class="variation-Baseprice">
@@ -135,7 +135,7 @@
                                                 </td>
                                                 <td class="product-total">
                                                 <span class="woocommerce-Price-amount amount">
-                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price']*$data['quantity']}}</span>
+                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price']}}</span>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -145,7 +145,7 @@
                                                 <th>Subtotal</th>
                                                 <td>
                                                 <span class="woocommerce-Price-amount amount">
-                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>51.80</span>
+                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$cart_data['total_amount']}}</span>
                                                 </td>
                                             </tr>
                                             <tr class="order-total">
