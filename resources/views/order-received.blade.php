@@ -35,9 +35,9 @@
                             <div class="woocommerce">
                                 <p class="woocommerce-thankyou-order-received">Thank you. Your order has been received.</p>
                                 <ul class="woocommerce-thankyou-order-details order_details">
-                                    <li class="order">Order Number:<strong>645</strong></li>
-                                    <li class="date">Date:<strong>February 2, 2017</strong></li>
-                                    <li class="total">Total:<strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></strong></li>
+                                    <li class="order">Order Number:<strong>{{$orderdetails->id}}</strong></li>
+                                    <li class="date">Date:<strong>{{$orderdetails->created_at}}</strong></li>
+                                    <li class="total">Total:<strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{$orderdetails->total_ammount}}</span></strong></li>
                                     <li class="method">Payment Method:<strong>Direct Bank Transfer</strong></li>
                                 </ul>
                                 <div class="clear"></div>
@@ -51,31 +51,34 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+{{--                                    @dd($orderdetails)--}}
+                                    @foreach($orderdetails->product as $data)
                                     <tr class="order_item">
                                         <td class="product-name">
-                                            <a href="single-product-v1.html">Country Burger</a> <strong class="product-quantity">× 1</strong>
+                                            <a href="single-product-v1.html">{{$data->product_name}}</a> <strong class="product-quantity">X{{$data->pivot->quantity}}</strong>
                                             <dl class="variation">
-                                                <dt class="variation-PickSize362590"><span id="1">Pick Size</span> (<span class="woocommerce Price amount amount"><span class="woocommerce Price currencySymbol">$</span>25.90</span>):</dt>
+                                                <dt class="variation-PickSize362590"><span id="1">1 peace price</span> (<span class="woocommerce Price amount amount"><span class="woocommerce Price currencySymbol">$</span>{{$data->price}}</span>):</dt>
                                                 <dd class="variation-PickSize362590">
                                                     <p>29  cm</p>
                                                 </dd>
                                             </dl>
                                         </td>
-                                        <td class="product-total"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span>  </td>
+                                        <td class="product-total"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{$data->pivot->quantity*$data->price}}</span>  </td>
                                     </tr>
+                                        @endforeach
                                     </tbody>
                                     <tfoot>
-                                    <tr>
-                                        <th scope="row">Subtotal:</th>
-                                        <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></td>
-                                    </tr>
+{{--                                    <tr>--}}
+{{--                                        <th scope="row">Subtotal:</th>--}}
+{{--                                        <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></td>--}}
+{{--                                    </tr>--}}
                                     <tr>
                                         <th scope="row">Payment Method:</th>
                                         <td>Direct Bank Transfer</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Total:</th>
-                                        <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>25.90</span></td>
+                                        <td><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>{{$orderdetails->total_ammount}}</span></td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -86,7 +89,7 @@
                                     <tbody>
                                     <tr>
                                         <th>Email:</th>
-                                        <td>anas@transvelo.com</td>
+                                        <td>{{\App\User::find($orderdetails->user_id)->email}}</td>
                                     </tr>
                                     <tr>
                                         <th>Telephone:</th>

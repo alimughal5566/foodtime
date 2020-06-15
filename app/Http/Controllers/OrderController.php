@@ -19,8 +19,8 @@ class OrderController extends Controller
 //        $tprice=$cart_data['price'];
         foreach ($cart_data as $key=>$datum){
 
-            $cart_data['total']=$datum['price']*$request->quantity;
-            $cart_data['total_amount']=$datum['price'];
+//            $cart_data['total']=$datum['price']*$request->quantity;
+//            $cart_data['total_amount']=$datum['price'];
 //            $cart_data['quantity']=$request->quantity;
 
         }
@@ -33,23 +33,23 @@ class OrderController extends Controller
 
     public function OrderReceived(){
         $cart_data=\Session('cart');
-        $totalamount=0;
         $order=new Order();
         $order->user_id=Auth::user()->id;
-        foreach ($cart_data as $cart)
-        {
-                    $totalamount+=$cart['price'];
-        }
-        $order->total_ammount=$totalamount;
+        $order->total_ammount=$cart_data['totalPrice'];
         $order->save();
 
-        foreach ($cart_data as $cart)
+        foreach ($cart_data['products'] as $cart)
         {
             $id=$cart['id'];
             $order->product()->attach($id,['quantity'=>$cart['quantity'],'amount'=>$cart['price']]);
         }
+        //here is remove session data
         session()->forget('cart');
-        return view('order-received');
+
+//here is Retrive data from DB
+        $savedID=$order->id;
+        $orderdetails=Order::find($savedID);
+        return view('order-received',compact('orderdetails'));
     }
 
     //here is all orders function

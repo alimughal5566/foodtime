@@ -113,14 +113,14 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($cart_data as $data)
+                                            @foreach($cart_data['products'] as $data)
 {{--                                                @php--}}
 {{--                                                    $data['price']+=$data['price'];--}}
 {{--                                                        dd($data['price']);--}}
 {{--                                                @endphp--}}
                                             <tr class="cart_item">
                                                 <td class="product-name">
-                                                    {{$data['name']}}<strong class="product-quantity">{{$data['quantity']}}</strong>
+                                                    {{$data['name']}}<strong class="product-quantity">{{$data['quantity']}}X</strong>
                                                     <dl class="variation">
                                                         <dt class="variation-Baseprice">Base price:</dt>
                                                         <dd class="variation-Baseprice">
@@ -135,7 +135,7 @@
                                                 </td>
                                                 <td class="product-total">
                                                 <span class="woocommerce-Price-amount amount">
-                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price']}}</span>
+                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price'] * $data['quantity']}}</span>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -145,13 +145,13 @@
                                                 <th>Subtotal</th>
                                                 <td>
                                                 <span class="woocommerce-Price-amount amount">
-                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$cart_data['total_amount']}}</span>
+{{--                                                <span class="woocommerce-Price-currencySymbol">&#36;</span>{{$cart_data['totalPrice']}}</span>--}}
                                                 </td>
                                             </tr>
                                             <tr class="order-total">
                                                 <th>Total</th>
                                                 <td>
-                                                    <strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>51.80</span></strong>
+                                                    <strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$cart_data['totalPrice']}}</span></strong>
                                                 </td>
                                             </tr>
                                             </tfoot>

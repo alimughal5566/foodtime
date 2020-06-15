@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4d48184-58d2-456e-a326-6ac92897ea97" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/order-Details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order_list.blade.php" afterDir="false" />
+    <list default="true" id="3d9a63bb-6ec6-4565-b743-29f9f9b5cc4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cart.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin_dash.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin_dash.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/order-received.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/order-received.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,14 +144,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\noman\OneDrive\Desktop\work\Foodtime\foodtime\resources\views" />
-      <recent name="C:\Users\PC\Desktop\project\foodtime\resources\views\Products" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\foodtime\app\Models" />
       <recent name="C:\Users\PC\Desktop\project\foodtime\app" />
       <recent name="C:\Users\PC\Desktop\project\foodtime\app\Models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\noman\OneDrive\Desktop\work\Foodtime\foodtime\resources\views" />
+      <recent name="C:\Users\PC\Desktop\project\foodtime\resources\views\Products" />
     </key>
   </component>
   <component name="RunDashboard">

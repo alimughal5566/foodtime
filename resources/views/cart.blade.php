@@ -26,7 +26,7 @@
                                     </li>
                                 </ul>
                             </div>
-
+                        @if(\Session::has('cart'))
                         <div id="post-8" class="post-8 page type-page status-publish hentry">
                             <div class="entry-content">
                                 <div class="woocommerce">
@@ -43,8 +43,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                                     @foreach($cart_data ?? '' as $data)
-                                                         {{--@dd('/images/'.$data['photo'])--}}
+{{--                                            @dd($cart_data)--}}
+                                                     @foreach($cart_data['products'] ?? ''  as $data)
+{{--                                                         @dd($cart_data)--}}
                                             <tr class="cart_item">
                                                 <td class="product-remove">
                                                     <a href="#" class="remove" >&times;</a>
@@ -75,12 +76,12 @@
                                                     <div class="qty-btn">
                                                         <label>Quantity</label>
                                                         <div class="quantity">
-                                                            <input type="number" id="quantity" name="quantity" value="{{$data['quantity']}}" title="Qty" class="input-text qty text my_button"/>
+                                                            <input type="number" onclick="changeQty({{$data['id']}})" id="{{$data['id']}}" name="quantity" value="{{$data['quantity']}}" title="Qty" class="input-text qty text my_button"/>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td class="product-subtotal" data-title="Total">
-                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price']*$data['quantity']}}</span>
+                                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$data['price'] * $data['quantity']}}</span>
                                                 </td>
                                             </tr>
                                                 @endforeach
@@ -108,13 +109,13 @@
                                                 <tr class="cart-subtotal">
                                                     <th>Subtotal</th>
                                                     <td data-title="Subtotal">
-                                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>51.80</span>
+                                                        <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $cart_data['totalPrice'] }}</span>
                                                     </td>
                                                 </tr>
                                                 <tr class="order-total">
                                                     <th>Total</th>
                                                     <td data-title="Total">
-                                                        <strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>51.80</span></strong>
+                                                        <strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $cart_data['totalPrice'] }}</span></strong>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -126,6 +127,9 @@
                                 </div>
                             </div>
                         </div>
+                        @else
+                            <H1>Please add Products first</H1>
+                        @endif
                         <!-- .entry-content -->
                     </main><!-- #main -->
             </div>
@@ -134,21 +138,38 @@
     </div>
 <script>
     // var quantity=document.getElementById('qty').value;
-    $(document).ready(function() {
-                $('.my_button').click(function() {
-                        var orderid=$(this).attr("value");
-                        console.log(orderid);
-                        $.ajax({
-                            type: "get",
-                            url: "/orderdetails/",
-                            dataType: "JSON",
-                            data: {orderid:orderid
-                            },
-        success : function(response) {
-            // $(inputQuantityElement).val(new_quantity);
-        }
-    });
-                });
-    });
+    // $(document).ready(function() {
+    //             $('.my_button').click(function() {
+    //                     var orderid=$(this).attr("value");
+    //                     console.log(orderid);
+    //                     $.ajax({
+    //                         type: "get",
+    //                         url: "/orderdetails/",
+    //                         dataType: "JSON",
+    //                         data: {orderid:orderid
+    //                         },
+    //     success : function(response) {
+    //         // $(inputQuantityElement).val(new_quantity);
+    //     }
+    // });
+    //             });
+    // });
+
+   function changeQty($id){
+       var qtyID = document.getElementById($id);
+       $.ajax({
+          type:'get',
+          url:'{{route("qty-update")}}',
+          data:{'id':$id,'qty':qtyID.value},
+          success:function (response) {
+              if(response === true){
+                  location.reload();
+              }
+          },
+          error:function () {
+              alert('something is wrong');
+          }
+       });
+   }
 </script>
 @endsection

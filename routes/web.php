@@ -40,6 +40,7 @@ Route::group(['Public'],function () {
         Route::get('/addtoCart{id}','ProductController@addtoCart')->name('addtoCart');
 //        Route::get('/addto{id}','ProductController@addtoCart')->name('addtoCart');
         Route::get('cartView','ProductController@viewCart')->name('viewCart');
+        Route::get('qty-update','ProductController@cartUpdate')->name('qty-update');
 
 
 
@@ -113,6 +114,7 @@ Route::group(['Private'],function () {
     Route::group(['UserController'], function(){
 
        Route::get('/user-list' , 'UserController@user_list')->name('user_list') ;
+        Route::get('/logout', 'Auth\LoginController@logout');
 
     });
 
