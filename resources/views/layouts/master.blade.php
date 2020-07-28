@@ -53,8 +53,7 @@
             <div class="header-wrap">
                 <div class="site-branding">
                     <a href="index.html" class="custom-logo-link" rel="home">
-                        <!-- logo link -->
-
+                        <!-- logo link --><h3>Food Time</h3>
                         <!-- logo link -->
                     </a>
                 </div>
@@ -62,14 +61,30 @@
                     <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span class="close-icon"><i class="po po-close-delete"></i></span><span class="menu-icon"><i class="po po-menu-icon"></i></span><span class=" screen-reader-text">Menu</span></button>
                     <div class="primary-navigation">
                         <ul id="menu-main-menu" class="menu nav-menu" aria-expanded="false">
-                            <li class="menu-item"><a href="{{'/home'}}">Home</a></li>
-                            <li class="menu-item"><a href="{{'category-detail'}}">Order Online</a></li>
+                            <li class="menu-item"><a href="{{'/'}}">Home</a></li>
+{{--                            <li class="menu-item"><a href="{{'category-detail'}}">Order Online</a></li>--}}
 
-{{--                            <li class="menu-item"><a href="{{('/about')}}">About Us</a></li>--}}
+                            <li class="menu-item"><a href="{{('/about')}}">About Us</a></li>
                             {{--                        <li class="menu-item"><a href="{{url('/contact')}}">Contact</a></li>--}}
 
                             @if(\Auth::check())
-                                <li class="menu-item"><a href="{{'login'}}">logout</a></li>
+                                <li class="menu-item"><a <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li></a></li>
                             @else
                                 <li class="menu-item"><a href="{{'login'}}">Login</a></li>
                                 <li class="menu-item"><a href="{{'register'}}">Register</a></li>

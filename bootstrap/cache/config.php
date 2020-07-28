@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:HZwhL/GWp/Wj2qU/I7QsG8U1N/k8AYGBMutgdsVW2EI=',
+    'key' => 'base64:Ul3LbRdTxwot/cWXu/lG8nXMuR05t0uWU5AUuiY048I=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -175,7 +175,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -314,12 +314,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\app',
+        'root' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\app/public',
+        'root' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -365,13 +365,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -421,7 +421,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -444,7 +444,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\resources\\views/vendor/mail',
       ),
     ),
     'log_channel' => NULL,
@@ -523,7 +523,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -543,9 +543,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\resources\\views',
+      0 => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\noman\\OneDrive\\Desktop\\work\\Foodtime\\foodtime\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\Syeda R Z Naqvi\\Desktop\\foodtime\\storage\\framework\\views',
   ),
   'flare' => 
   array (

@@ -5,7 +5,7 @@
         <div class="col-full">
                             <div class="pizzaro-breadcrumb">
                                 <nav class="woocommerce-breadcrumb" style="margin-top: 40px" >
-                                    <span>Home</span>
+                                    <span><a href="{{'/'}}">Home</a></span>
                                     <span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Cart
                                 </nav>
                             </div>

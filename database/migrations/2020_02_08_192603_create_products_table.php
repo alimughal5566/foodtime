@@ -21,6 +21,8 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->string('description');
             $table->string('Ingredients')->nullable();
+            $table->string('disable')->nullable();
+            $table->string('Enable')->nullable();
             $table->string('thumbnail')->nullable();
             $table->timestamps();
         });

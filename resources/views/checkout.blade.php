@@ -4,7 +4,8 @@
     <div id="content" class="site-content" tabindex="-1" >
         <div class="col-full">
             <div class="pizzaro-breadcrumb" style="margin-top: 40px">
-                <nav class="woocommerce-breadcrumb"><a>Home</a>
+                <nav class="woocommerce-breadcrumb"><a href="{{'/'}}">Home</a>
+
                     <span class="delimiter"><i class="po po-arrow-right-slider"></i></span>Checkout
                 </nav>
             </div>
@@ -51,21 +52,21 @@
                                                 </p>
                                                 <p class="form-row form-row form-row-last validate-required validate-phone" id="billing_phone_field">
                                                     <label for="billing_phone" class="">Phone </label>
-                                                    <input type="tel" class="input-text " name="billing_phone" id="billing_phone" placeholder=""  autocomplete="tel" value=""  />
+                                                    <input type="phone" class="input-text " name="billing_phone" id="billing_phone" placeholder=""  autocomplete="phone" value="{{Auth::user()->phone}}"  />
                                                 </p>
                                                 <div class="clear"></div>
                                                 <p class="form-row form-row form-row-wide address-field update_totals_on_change validate-required" id="billing_country_field">
                                                     <label for="billing_country" class="">Country </label>
-                                                    <input type="text" value="" placeholder="" id="billing_country" name="billing_phone" class="input-text ">
+                                                    <input type="country" value="{{Auth::user()->country}}" placeholder="" id="billing_country" name="billing_country" class="input-text ">
                                                 </p>
                                                 <div class="clear"></div>
                                                 <p class="form-row form-row form-row-wide address-field validate-required" id="billing_address_1_field">
                                                     <label for="billing_address_1" class="">Address </label>
-                                                    <input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="Street address"  autocomplete="address-line1" value=""  />
+                                                    <input type="text" class="input-text " name="billing_address_1" id="billing_address_1" placeholder="Street address"  autocomplete="address-line1" value="{{Auth::user()->address}}"  />
                                                 </p>
-                                                <p class="form-row form-row form-row-wide address-field" id="billing_address_2_field">
-                                                    <input type="text" class="input-text " name="billing_address_2" id="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)"  autocomplete="address-line2" value=""  />
-                                                </p>
+{{--                                                <p class="form-row form-row form-row-wide address-field" id="billing_address_2_field">--}}
+{{--                                                    <input type="text" class="input-text " name="billing_address_2" id="billing_address_2" placeholder="Apartment, suite, unit etc. (optional)"  autocomplete="address-line2" value=""  />--}}
+{{--                                                </p>--}}
                                                 <p class="form-row form-row form-row-wide address-field validate-required" id="billing_city_field">
                                                     <label for="billing_city" class="">Town / City </label>
                                                     <input type="text" class="input-text " name="billing_city" id="billing_city" placeholder=""  autocomplete="address-level2" value=""  />
@@ -79,16 +80,16 @@
                                                     <input type="text" class="input-text " name="billing_postcode" id="billing_postcode" placeholder=""  autocomplete="postal-code" value="DFSAF@GMAIL.COM"  />
                                                 </p>
                                                 <div class="clear"></div>
-                                                <p class="form-row form-row-wide create-account">
-                                                    <input class="input-checkbox" id="createaccount"  type="checkbox" name="createaccount" value="1" />
-                                                    <label for="createaccount" class="checkbox">Create an account?</label>
-                                                </p>
+{{--                                                <p class="form-row form-row-wide create-account">--}}
+{{--                                                    <input class="input-checkbox" id="createaccount"  type="checkbox" name="createaccount" value="1" />--}}
+{{--                                                    <label for="createaccount" class="checkbox">Create an account?</label>--}}
+{{--                                                </p>--}}
                                                 <div class="create-account">
-                                                    <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
-                                                    <p class="form-row form-row validate-required" id="account_password_field">
-                                                        <label for="account_password" class="">Account password </label>
-                                                        <input type="password" class="input-text " name="account_password" id="account_password" placeholder="Password"   value=""  />
-                                                    </p>
+{{--                                                    <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>--}}
+{{--                                                    <p class="form-row form-row validate-required" id="account_password_field">--}}
+{{--                                                        <label for="account_password" class="">Account password </label>--}}
+{{--                                                        <input type="password" class="input-text " name="account_password" id="account_password" placeholder="Password"   value=""  />--}}
+{{--                                                    </p>--}}
                                                     <div class="clear"></div>
                                                 </div>
                                             </div>
@@ -97,7 +98,7 @@
                                             <div class="woocommerce-shipping-fields">
                                                 <h3>Additional Information</h3>
                                                 <p class="form-row form-row notes" id="order_comments_field">
-                                                    <label for="order_comments" class="">Order Notes</label>
+                                                    <label for="order_comments" class="">Feedback</label>
                                                     <textarea name="order_comments" class="input-text " id="order_comments" placeholder="Notes about your order, e.g. special notes for delivery."    rows="2" cols="5"></textarea>
                                                 </p>
                                             </div>

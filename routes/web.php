@@ -34,6 +34,8 @@ Route::group(['Public'],function () {
 
 
     });
+    Route::get('/about','AboutController@about')->name('about');
+
 
     Route::group(['ProductController'], function () {
 
@@ -94,6 +96,7 @@ Route::group(['Private'],function () {
         Route::get('/product-list', 'ProductController@product_list')->name('product_list');
         Route::get('/product/delete/{id}', 'ProductController@product_delete')->name('product_delete');
         Route::get('/product/edit/{id}', 'ProductController@edit_product')->name('edit_product');
+
         Route::post('/product-update', 'ProductController@product_update')->name('product_update');
 
 

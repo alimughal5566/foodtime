@@ -30,6 +30,8 @@
                                     <th>ingredients</th>
                                     <th>Update</th>
                                     <th>Delete</th>
+                                    <th>Disable</th>
+                                    <th>Enable</th>
 
                                 </tr>
                                 </thead>
@@ -44,6 +46,7 @@
                                         <td >{{$product->description}}</td>
                                         <td >{{$product->price}}</td>
                                         <td >{{$product->Ingredients}}</td>
+
                                         <td>
                                             <a href="{{route('edit_product',[$product->id])}}" class="btn btn-outline-success">Edit</a>
 
@@ -51,6 +54,12 @@
                                         <td>
                                             <a href="{{route('product_delete',[$product->id])}}" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
 
+                                        </td>
+                                        <td>
+                                            <a href="" class="btn btn-outline-danger" onclick="return confirm('Are you want to disable this?');" > Disable</a>
+                                        </td>
+                                        <td>
+                                            <a href="" class="btn btn-outline-success" onclick="return confirm('Are you want to enable this?');" > Enable</a>
                                         </td>
                                     </tr>
                                 @endforeach

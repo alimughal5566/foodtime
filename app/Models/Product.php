@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
 
-    protected $fillable=['product_name','category_id','price','description','Ingredients','thumbnail'];
+    protected $fillable=['product_name','category_id','price','description','Ingredients','thumbnail','disable', 'Enable'];
     public function category(){
         return $this->belongsTo(categories::class);
     }
@@ -31,7 +31,10 @@ class Product extends Model
             'price' => $formdata->price,
             'description' => $formdata->description,
             'Ingredients' => $formdata->Ingredients,
-            'thumbnail' => $imageDbPath
+            'thumbnail' => $imageDbPath,
+            'disable' => $formdata->disable,
+            'enable' => $formdata->disable
+
         ]);
 
         if ($addproduct){
